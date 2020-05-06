@@ -1,0 +1,17 @@
+<app-morse-player [text]="answer"></app-morse-player>
+<mat-form-field class="w-100">
+  <mat-label>Enter what you heard in English</mat-label>
+  <input
+    matInput
+    placeholder="Ex. SOS"
+    [(value)]="enteredValue"
+    (keyup)="enteredValue = $event.target.value"
+  />
+</mat-form-field>
+
+<button type="button" class="btn btn-primary" (click)="checkAnswer()">
+  Check
+</button>
+<span [class.correct]="isCorrect" [class.incorrect]="!isCorrect">{{
+  result
+}}</span>

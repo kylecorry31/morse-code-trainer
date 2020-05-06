@@ -1,0 +1,106 @@
+import { MorseSymbol } from "./morse-symbol";
+
+export class MorseLetterMapper {
+  private letterMap = {
+    a: [MorseSymbol.Dot, MorseSymbol.Dash],
+    b: [MorseSymbol.Dash, MorseSymbol.Dot, MorseSymbol.Dot, MorseSymbol.Dot],
+    c: [MorseSymbol.Dash, MorseSymbol.Dot, MorseSymbol.Dash, MorseSymbol.Dot],
+    d: [MorseSymbol.Dash, MorseSymbol.Dot, MorseSymbol.Dot],
+    e: [MorseSymbol.Dot],
+    f: [MorseSymbol.Dot, MorseSymbol.Dot, MorseSymbol.Dash, MorseSymbol.Dot],
+    g: [MorseSymbol.Dash, MorseSymbol.Dash, MorseSymbol.Dot],
+    h: [MorseSymbol.Dot, MorseSymbol.Dot, MorseSymbol.Dot, MorseSymbol.Dot],
+    i: [MorseSymbol.Dot, MorseSymbol.Dot],
+    j: [MorseSymbol.Dot, MorseSymbol.Dash, MorseSymbol.Dash, MorseSymbol.Dash],
+    k: [MorseSymbol.Dash, MorseSymbol.Dot, MorseSymbol.Dash],
+    l: [MorseSymbol.Dot, MorseSymbol.Dash, MorseSymbol.Dot, MorseSymbol.Dot],
+    m: [MorseSymbol.Dash, MorseSymbol.Dash],
+    n: [MorseSymbol.Dash, MorseSymbol.Dot],
+    o: [MorseSymbol.Dash, MorseSymbol.Dash, MorseSymbol.Dash],
+    p: [MorseSymbol.Dot, MorseSymbol.Dash, MorseSymbol.Dash, MorseSymbol.Dot],
+    q: [MorseSymbol.Dash, MorseSymbol.Dash, MorseSymbol.Dot, MorseSymbol.Dot],
+    r: [MorseSymbol.Dot, MorseSymbol.Dash, MorseSymbol.Dot],
+    s: [MorseSymbol.Dot, MorseSymbol.Dot, MorseSymbol.Dot],
+    t: [MorseSymbol.Dash],
+    u: [MorseSymbol.Dot, MorseSymbol.Dot, MorseSymbol.Dash],
+    v: [MorseSymbol.Dot, MorseSymbol.Dot, MorseSymbol.Dot, MorseSymbol.Dash],
+    w: [MorseSymbol.Dot, MorseSymbol.Dash, MorseSymbol.Dash],
+    x: [MorseSymbol.Dash, MorseSymbol.Dot, MorseSymbol.Dot, MorseSymbol.Dash],
+    y: [MorseSymbol.Dash, MorseSymbol.Dot, MorseSymbol.Dash, MorseSymbol.Dash],
+    z: [MorseSymbol.Dash, MorseSymbol.Dash, MorseSymbol.Dot, MorseSymbol.Dot],
+    "1": [
+      MorseSymbol.Dot,
+      MorseSymbol.Dash,
+      MorseSymbol.Dash,
+      MorseSymbol.Dash,
+      MorseSymbol.Dash,
+    ],
+    "2": [
+      MorseSymbol.Dot,
+      MorseSymbol.Dot,
+      MorseSymbol.Dash,
+      MorseSymbol.Dash,
+      MorseSymbol.Dash,
+    ],
+    "3": [
+      MorseSymbol.Dot,
+      MorseSymbol.Dot,
+      MorseSymbol.Dot,
+      MorseSymbol.Dash,
+      MorseSymbol.Dash,
+    ],
+    "4": [
+      MorseSymbol.Dot,
+      MorseSymbol.Dot,
+      MorseSymbol.Dot,
+      MorseSymbol.Dot,
+      MorseSymbol.Dash,
+    ],
+    "5": [
+      MorseSymbol.Dot,
+      MorseSymbol.Dot,
+      MorseSymbol.Dot,
+      MorseSymbol.Dot,
+      MorseSymbol.Dot,
+    ],
+    "6": [
+      MorseSymbol.Dash,
+      MorseSymbol.Dot,
+      MorseSymbol.Dot,
+      MorseSymbol.Dot,
+      MorseSymbol.Dot,
+    ],
+    "7": [
+      MorseSymbol.Dash,
+      MorseSymbol.Dash,
+      MorseSymbol.Dot,
+      MorseSymbol.Dot,
+      MorseSymbol.Dot,
+    ],
+    "8": [
+      MorseSymbol.Dash,
+      MorseSymbol.Dash,
+      MorseSymbol.Dash,
+      MorseSymbol.Dot,
+      MorseSymbol.Dot,
+    ],
+    "9": [
+      MorseSymbol.Dash,
+      MorseSymbol.Dash,
+      MorseSymbol.Dash,
+      MorseSymbol.Dash,
+      MorseSymbol.Dot,
+    ],
+    "0": [
+      MorseSymbol.Dash,
+      MorseSymbol.Dash,
+      MorseSymbol.Dash,
+      MorseSymbol.Dash,
+      MorseSymbol.Dash,
+    ],
+  };
+
+  map(letter: string): MorseSymbol[] | undefined {
+    return this.letterMap[letter.toLowerCase()];
+  }
+}
