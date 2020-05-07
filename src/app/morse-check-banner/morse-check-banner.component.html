@@ -1,8 +1,17 @@
-<div id="banner">
-  <h1>{{ isCorrect ? "Correct" : "Incorrect" }}</h1>
-  <p *ngIf="!isCorrect">{{ correctAnswer }}</p>
-
-  <button type="button" class="btn btn-secondary" (click)="next.emit()">
-    Continue
-  </button>
+<div id="banner" [class.correct]="isCorrect" [class.incorrect]="!isCorrect">
+  <div class="float-left" id="result-hldr">
+    <h1>
+      <i class="fas fa-check" *ngIf="isCorrect"></i
+      ><i class="fas fa-times" *ngIf="!isCorrect"></i>
+      {{ isCorrect ? "Correct" : "Incorrect" }}
+    </h1>
+    <p *ngIf="!isCorrect">
+      The correct translation is <strong>{{ correctAnswer }}</strong>
+    </p>
+  </div>
+  <div class="float-right" id="continue-btn-hldr">
+    <button type="button" class="btn btn-light" (click)="next.emit()">
+      Continue
+    </button>
+  </div>
 </div>

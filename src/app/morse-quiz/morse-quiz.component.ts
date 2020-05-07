@@ -17,7 +17,7 @@ export class MorseQuizComponent implements OnInit {
   constructor(private answerService: AnswerService) {}
 
   ngOnInit() {
-    this.answer = this.answerService.getRandomAnswer();
+    this.answer = this.answerService.getRandomAnswer(1);
   }
 
   checkAnswer() {
@@ -43,6 +43,6 @@ export class MorseQuizComponent implements OnInit {
   next() {
     this.isDone = false;
     this.enteredValue = "";
-    this.answer = this.answerService.getRandomAnswer();
+    this.answer = this.answerService.getRandomAnswer(1);
   }
 }

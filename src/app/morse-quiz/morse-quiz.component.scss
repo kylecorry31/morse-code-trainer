@@ -1,0 +1,34 @@
+:host {
+  display: grid;
+  grid-template-areas:
+    "player"
+    "entry"
+    "entry"
+    "entry"
+    "footer";
+  height: 100%;
+  justify-content: stretch;
+  grid-auto-rows: 20%;
+}
+
+#player {
+  grid-area: player;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#text-entry {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  grid-area: entry;
+}
+
+#submit-buttons {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
+}

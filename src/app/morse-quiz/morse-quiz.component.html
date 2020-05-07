@@ -1,42 +1,43 @@
-<app-morse-player [text]="answer" [disabled]="isDone"></app-morse-player>
-<!-- <h3>Type the correct translation</h3>
-<mat-form-field class="w-100">
-  <mat-label>Enter what you heard in English</mat-label>
-  <input
-    matInput
-    placeholder="Ex. SOS"
-    [(value)]="enteredValue"
-    (keyup)="enteredValue = $event.target.value"
+<div id="player">
+  <app-morse-player
+    [text]="answer"
     [disabled]="isDone"
-  />
-</mat-form-field> -->
+    class="container"
+  ></app-morse-player>
+</div>
 
-<app-morse-text-entry
-  [disabled]="isDone"
-  (textEntered)="enteredValue = $event"
-></app-morse-text-entry>
+<div id="text-entry">
+  <app-morse-text-entry
+    [disabled]="isDone"
+    (textEntered)="enteredValue = $event"
+    class="container"
+  ></app-morse-text-entry>
+</div>
 
-<button
-  type="button"
-  class="btn btn-secondary"
-  (click)="skip()"
-  [class.disabled]="isDone"
->
-  Skip
-</button>
+<div id="submit-buttons">
+  <div class="container" *ngIf="!isDone">
+    <button
+      type="button"
+      class="btn btn-secondary float-left"
+      (click)="skip()"
+      [class.disabled]="isDone"
+    >
+      Skip
+    </button>
 
-<button
-  type="button"
-  class="btn btn-primary"
-  (click)="checkAnswer()"
-  [class.disabled]="isDone"
->
-  Check
-</button>
-
-<app-morse-check-banner
-  [isCorrect]="isCorrect"
-  [correctAnswer]="answer"
-  (next)="next()"
-  *ngIf="isDone"
-></app-morse-check-banner>
+    <button
+      type="button"
+      class="btn btn-primary float-right"
+      (click)="checkAnswer()"
+      [class.disabled]="isDone"
+    >
+      Check
+    </button>
+  </div>
+  <app-morse-check-banner
+    [isCorrect]="isCorrect"
+    [correctAnswer]="answer"
+    (next)="next()"
+    *ngIf="isDone"
+  ></app-morse-check-banner>
+</div>

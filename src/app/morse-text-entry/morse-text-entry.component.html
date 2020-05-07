@@ -1,11 +1,22 @@
-<h3>Type the correct translation</h3>
-<mat-form-field class="w-100">
-  <mat-label>Enter what you heard in English</mat-label>
+<h3>Type the word(s) you hear</h3>
+<!-- <mat-form-field class="w-100"> -->
+<!-- <input
+  class="w-100"
+  matInput
+  placeholder="Ex. SOS"
+  (keyup)="onTextChange($event.target.value)"
+  [(value)]="enteredText"
+  [disabled]="disabled" -->
+<!-- /> -->
+<!-- </mat-form-field> -->
+<div class="input-group">
   <input
-    matInput
+    type="text"
+    class="form-control"
     placeholder="Ex. SOS"
+    aria-label="Translation Entry"
     (keyup)="onTextChange($event.target.value)"
     [(value)]="enteredText"
     [disabled]="disabled"
   />
-</mat-form-field>
+</div>

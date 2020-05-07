@@ -69,7 +69,7 @@ export class MorsePlayerComponent implements OnInit, OnChanges {
     if (this.disabled) {
       return;
     }
-    this.dotDuration = 400;
+    this.dotDuration = 200;
     this.play();
   }
 
