@@ -25,6 +25,7 @@ export class MorsePlayerComponent implements OnInit, OnChanges {
   private dotDuration = 100;
 
   private lastTimeoutHandle: any;
+  private lastText: string;
 
   constructor(private morseService: MorseService) {}
 
@@ -32,9 +33,17 @@ export class MorsePlayerComponent implements OnInit, OnChanges {
     if (this.disabled) {
       this.stop();
     }
+
+    if (this.text !== this.lastText) {
+      this.lastText = this.text;
+      this.playNormal();
+    }
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.lastText = this.text;
+    this.playNormal();
+  }
 
   play() {
     const morse = this.morseService.encode(this.text);

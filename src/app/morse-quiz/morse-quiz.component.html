@@ -18,7 +18,7 @@
   <div class="container" *ngIf="!isDone">
     <button
       type="button"
-      class="btn btn-secondary float-left"
+      class="btn btn-secondary btn-lg float-left"
       (click)="skip()"
       [class.disabled]="isDone"
     >
@@ -27,7 +27,7 @@
 
     <button
       type="button"
-      class="btn btn-primary float-right"
+      class="btn btn-primary btn-lg float-right"
       (click)="checkAnswer()"
       [class.disabled]="isDone"
     >
