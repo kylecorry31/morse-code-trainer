@@ -3,6 +3,8 @@ import {
   OnInit,
   Input,
   ChangeDetectionStrategy,
+  OnChanges,
+  SimpleChanges,
 } from "@angular/core";
 import { MorseService } from "../morse-service.service";
 import { Signal } from "../domain/signal";
@@ -13,8 +15,9 @@ import { Signal } from "../domain/signal";
   styleUrls: ["./morse-player.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MorsePlayerComponent implements OnInit {
+export class MorsePlayerComponent implements OnInit, OnChanges {
   @Input() text: string;
+  @Input() disabled: boolean;
 
   private context: AudioContext;
   private gain: GainNode;
@@ -24,6 +27,12 @@ export class MorsePlayerComponent implements OnInit {
   private lastTimeoutHandle: any;
 
   constructor(private morseService: MorseService) {}
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.disabled) {
+      this.stop();
+    }
+  }
 
   ngOnInit() {}
 
@@ -46,6 +55,22 @@ export class MorsePlayerComponent implements OnInit {
       () => this.playSignal(this.gain, morse),
       this.dotDuration * 7
     );
+  }
+
+  playNormal() {
+    if (this.disabled) {
+      return;
+    }
+    this.dotDuration = 100;
+    this.play();
+  }
+
+  playSlow() {
+    if (this.disabled) {
+      return;
+    }
+    this.dotDuration = 400;
+    this.play();
   }
 
   stop() {

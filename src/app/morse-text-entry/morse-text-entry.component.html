@@ -1,0 +1,11 @@
+<h3>Type the correct translation</h3>
+<mat-form-field class="w-100">
+  <mat-label>Enter what you heard in English</mat-label>
+  <input
+    matInput
+    placeholder="Ex. SOS"
+    (keyup)="onTextChange($event.target.value)"
+    [(value)]="enteredText"
+    [disabled]="disabled"
+  />
+</mat-form-field>
