@@ -1,5 +1,7 @@
 # MorseCode
 
+![Node.js CI](https://github.com/kylecorry31/morse-code-trainer/workflows/Node.js%20CI/badge.svg)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
 ## Development server
