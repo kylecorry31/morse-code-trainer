@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MorseQuizComponent } from "./morse-quiz/morse-quiz.component";
 import { MorseCheckBannerComponent } from "./morse-check-banner/morse-check-banner.component";
 import { MorseTextEntryComponent } from "./morse-text-entry/morse-text-entry.component";
+import { MainMenuComponent } from './main-menu/main-menu.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { MorseTextEntryComponent } from "./morse-text-entry/morse-text-entry.com
     MorseQuizComponent,
     MorseCheckBannerComponent,
     MorseTextEntryComponent,
+    MainMenuComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

@@ -5,6 +5,7 @@ import {
   ChangeDetectionStrategy,
   OnChanges,
   SimpleChanges,
+  OnDestroy,
 } from "@angular/core";
 import { MorseService } from "../morse-service.service";
 import { Signal } from "../domain/signal";
@@ -15,7 +16,7 @@ import { Signal } from "../domain/signal";
   styleUrls: ["./morse-player.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MorsePlayerComponent implements OnInit, OnChanges {
+export class MorsePlayerComponent implements OnInit, OnChanges, OnDestroy {
   @Input() text: string;
   @Input() disabled: boolean;
 
@@ -43,6 +44,10 @@ export class MorsePlayerComponent implements OnInit, OnChanges {
   ngOnInit() {
     this.lastText = this.text;
     this.playNormal();
+  }
+
+  ngOnDestroy(): void {
+    this.stop();
   }
 
   play() {
@@ -90,15 +95,20 @@ export class MorsePlayerComponent implements OnInit, OnChanges {
   }
 
   private playSignal(gain: GainNode, signals: Signal[]) {
+    const changeTime = 0.005;
+
     if (signals.length === 0) {
-      gain.gain.setValueAtTime(0, this.context.currentTime);
+      gain.gain.cancelScheduledValues(this.context.currentTime);
+      gain.gain.setTargetAtTime(0, this.context.currentTime, changeTime);
       return;
     }
 
     if (signals[0].isHigh()) {
-      gain.gain.setValueAtTime(1, this.context.currentTime);
+      gain.gain.cancelScheduledValues(this.context.currentTime);
+      gain.gain.setTargetAtTime(1, this.context.currentTime, changeTime);
     } else {
-      gain.gain.setValueAtTime(0, this.context.currentTime);
+      gain.gain.cancelScheduledValues(this.context.currentTime);
+      gain.gain.setTargetAtTime(0, this.context.currentTime, changeTime);
     }
 
     this.lastTimeoutHandle = setTimeout(

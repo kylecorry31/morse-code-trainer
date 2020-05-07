@@ -14,7 +14,7 @@
 #player {
   grid-area: player;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -30,5 +30,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
 }

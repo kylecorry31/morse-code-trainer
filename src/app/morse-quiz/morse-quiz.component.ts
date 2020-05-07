@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { AnswerService } from "../answer.service";
+import { ActivatedRoute, ActivatedRouteSnapshot } from "@angular/router";
 
 @Component({
   selector: "app-morse-quiz",
@@ -7,6 +8,8 @@ import { AnswerService } from "../answer.service";
   styleUrls: ["./morse-quiz.component.scss"],
 })
 export class MorseQuizComponent implements OnInit {
+  @Input() level: number;
+
   answer: string;
 
   enteredValue: string = "";
@@ -14,18 +17,20 @@ export class MorseQuizComponent implements OnInit {
   isCorrect: boolean = false;
   isDone: boolean = false;
 
-  constructor(private answerService: AnswerService) {}
+  constructor(
+    private answerService: AnswerService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.answer = this.answerService.getRandomAnswer(1);
+    this.level = +this.route.snapshot.params["level"];
+    this.answer = this.answerService.getRandomAnswer(this.level);
   }
 
   checkAnswer() {
-    if (this.isDone) {
+    if (this.isDone || this.enteredValue.trim().length === 0) {
       return;
     }
-
-    console.log(this.enteredValue);
 
     this.isDone = true;
     if (this.enteredValue.toLowerCase() === this.answer.toLowerCase()) {
@@ -43,6 +48,6 @@ export class MorseQuizComponent implements OnInit {
   next() {
     this.isDone = false;
     this.enteredValue = "";
-    this.answer = this.answerService.getRandomAnswer(1);
+    this.answer = this.answerService.getRandomAnswer(this.level);
   }
 }

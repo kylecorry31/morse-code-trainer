@@ -1,9 +1,12 @@
-<div id="player">
+<div id="player" class="container">
   <app-morse-player
     [text]="answer"
     [disabled]="isDone"
-    class="container"
+    class="float-left"
   ></app-morse-player>
+  <a [routerLink]="['']" class="btn float-right"
+    ><h3><i class="fas fa-times"></i></h3
+  ></a>
 </div>
 
 <div id="text-entry">
@@ -14,11 +17,11 @@
   ></app-morse-text-entry>
 </div>
 
-<div id="submit-buttons">
-  <div class="container" *ngIf="!isDone">
+<div id="submit-buttons" [class.border-top]="!isDone">
+  <div class="col-md-6 container" *ngIf="!isDone">
     <button
       type="button"
-      class="btn btn-secondary btn-lg float-left"
+      class="btn btn-lg float-left"
       (click)="skip()"
       [class.disabled]="isDone"
     >
@@ -27,7 +30,10 @@
 
     <button
       type="button"
-      class="btn btn-primary btn-lg float-right"
+      class="btn btn-success btn-lg float-right"
+      [class.disabled]="
+        enteredValue == null || enteredValue.trim().length === 0
+      "
       (click)="checkAnswer()"
       [class.disabled]="isDone"
     >
