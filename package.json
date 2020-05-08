@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng deploy --base-href=/morse-code-trainer/"
+    "deploy": "ng deploy --base-href=/morse-code-trainer/ --no-silent --name=kylecorry31 --email=kylecorry31@gmail.com"
   },
   "private": true,
   "dependencies": {
