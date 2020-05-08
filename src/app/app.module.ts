@@ -9,6 +9,7 @@ import { MorseQuizComponent } from "./morse-quiz/morse-quiz.component";
 import { MorseCheckBannerComponent } from "./morse-check-banner/morse-check-banner.component";
 import { MorseTextEntryComponent } from "./morse-text-entry/morse-text-entry.component";
 import { MainMenuComponent } from './main-menu/main-menu.component';
+import { MorseLearnComponent } from './morse-learn/morse-learn.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
     MorseCheckBannerComponent,
     MorseTextEntryComponent,
     MainMenuComponent,
+    MorseLearnComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

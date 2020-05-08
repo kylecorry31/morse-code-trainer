@@ -9,6 +9,7 @@ import {
 } from "@angular/core";
 import { MorseService } from "../morse-service.service";
 import { Signal } from "../domain/signal";
+import { MorseSymbol } from "../domain/morse-symbol";
 
 @Component({
   selector: "app-morse-player",
@@ -19,6 +20,7 @@ import { Signal } from "../domain/signal";
 export class MorsePlayerComponent implements OnInit, OnChanges, OnDestroy {
   @Input() text: string;
   @Input() disabled: boolean;
+  @Input() showHints: boolean = false;
 
   private context: AudioContext;
   private gain: GainNode;
@@ -27,6 +29,11 @@ export class MorsePlayerComponent implements OnInit, OnChanges, OnDestroy {
 
   private lastTimeoutHandle: any;
   private lastText: string;
+
+  symbols: MorseSymbol[][];
+
+  Dot = MorseSymbol.Dot;
+  Dash = MorseSymbol.Dash;
 
   constructor(private morseService: MorseService) {}
 
@@ -37,6 +44,7 @@ export class MorsePlayerComponent implements OnInit, OnChanges, OnDestroy {
 
     if (this.text !== this.lastText) {
       this.lastText = this.text;
+      this.symbols = this.morseService.encodeSymbols(this.text);
       this.playNormal();
     }
   }
@@ -53,7 +61,7 @@ export class MorsePlayerComponent implements OnInit, OnChanges, OnDestroy {
   play() {
     const morse = this.morseService.encode(this.text);
 
-    if (this.context == null) {
+    if (this.context == null || this.context.state === "suspended") {
       this.context = new AudioContext();
       let oscillator = this.context.createOscillator();
       oscillator.frequency.value = 880;

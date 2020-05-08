@@ -1,0 +1,27 @@
+<div id="player" class="container">
+  <app-morse-player
+    [text]="selectedLetter"
+    class="float-left"
+    [showHints]="true"
+  ></app-morse-player>
+  <a [routerLink]="['']" class="btn float-right"
+    ><h3><i class="fas fa-times"></i></h3
+  ></a>
+</div>
+
+<div id="text-entry">
+  <div class="mb-3">
+    <button
+      class="btn"
+      *ngFor="let letter of letters"
+      (click)="playLetter(letter)"
+    >
+      {{ letter | uppercase }}
+    </button>
+  </div>
+  <div>
+    <button class="btn" *ngFor="let num of numbers" (click)="playLetter(num)">
+      {{ num }}
+    </button>
+  </div>
+</div>

@@ -2,6 +2,7 @@
   <app-morse-player
     [text]="answer"
     [disabled]="isDone"
+    [showHints]="level === 1"
     class="float-left"
   ></app-morse-player>
   <a [routerLink]="['']" class="btn float-right"

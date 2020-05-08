@@ -1,16 +1,16 @@
 <button
   type="button"
-  class="btn btn-primary btn-lg"
+  class="btn btn-primary btn-lg mr-3"
   (click)="playNormal()"
   [class.disabled]="disabled"
 >
   <i class="fas fa-volume-up"></i>
 </button>
-<!-- <button
-  type="button"
-  class="btn btn-primary"
-  (click)="playSlow()"
-  [class.disabled]="disabled"
->
-  Play Slowly
-</button> -->
+<ng-container *ngIf="showHints">
+  <div class="morse-word mr-3 d-inline" *ngFor="let word of symbols">
+    <ng-container *ngFor="let symbol of word">
+      <span *ngIf="symbol === Dot">.</span>
+      <span *ngIf="symbol === Dash">-</span>
+    </ng-container>
+  </div>
+</ng-container>

@@ -11,6 +11,15 @@ export class MorseService {
 
   constructor() {}
 
+  encodeSymbols(text: string): MorseSymbol[][] {
+    const letters: string[] = [];
+    for (let letter of text) {
+      letters.push(letter);
+    }
+
+    return letters.map((it) => (it !== " " ? this.letterMapper.map(it) : []));
+  }
+
   encode(text: string): Signal[] | null {
     const letters: string[] = [];
     for (let letter of text) {

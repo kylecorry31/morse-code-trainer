@@ -1,0 +1,27 @@
+:host {
+  display: grid;
+  grid-template-areas:
+    "player"
+    "entry"
+    "entry"
+    "entry"
+    "entry";
+  height: 100%;
+  justify-content: stretch;
+  grid-auto-rows: 20%;
+}
+
+#player {
+  grid-area: player;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#text-entry {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  grid-area: entry;
+}
