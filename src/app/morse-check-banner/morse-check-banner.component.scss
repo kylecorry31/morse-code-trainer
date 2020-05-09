@@ -24,7 +24,15 @@
 #result-hldr {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100%;
+}
+
+#result-hldr {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#continue-btn-hldr {
+  align-items: flex-end;
+  justify-content: center;
 }
