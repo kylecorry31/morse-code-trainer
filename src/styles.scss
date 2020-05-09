@@ -1,8 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "~bootstrap/dist/css/bootstrap.min.css";
+$color-primary: #ff564f;
+$color-primary-dark: #b32a25;
+$color-primary-light: #ff6e69;
+$color-secondary: white;
+$color-accent: #14b34b;
+$color-accent-light: #4fff8c;
+
+$body-bg: $color-primary;
+$body-color: $color-secondary;
+
+$theme-colors: (
+  "primary": $color-accent,
+  "success": $color-accent,
+  "danger": $color-primary-dark,
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --primary: $color-primary;
+}
 
 html,
 body {

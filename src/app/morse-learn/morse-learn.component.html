@@ -10,7 +10,7 @@
 </div>
 
 <div id="text-entry">
-  <div class="mb-3">
+  <div class="mb-3 container text-center">
     <button
       class="btn"
       *ngFor="let letter of letters"
@@ -19,7 +19,7 @@
       {{ letter | uppercase }}
     </button>
   </div>
-  <div>
+  <div class="container text-center">
     <button class="btn" *ngFor="let num of numbers" (click)="playLetter(num)">
       {{ num }}
     </button>
