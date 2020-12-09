@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "~11.0.4",
     "@angular/router": "~11.0.4",
     "@fortawesome/angular-fontawesome": "^0.8.0",
-    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "angular-cli-ghpages": "^0.6.2",
     "bootstrap": "^4.5.3",
     "random-words": "^1.1.1",
