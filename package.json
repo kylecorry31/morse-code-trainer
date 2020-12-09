@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng deploy --base-href=/morse-code-trainer/ --no-silent --name=kylecorry31 --email=kylecorry31@gmail.com"
+    "deploy": "ng build --prod --base-href=/morse-code-trainer/ --output-path docs"
   },
   "private": true,
   "dependencies": {
@@ -23,7 +23,6 @@
     "@angular/router": "~11.0.4",
     "@fortawesome/angular-fontawesome": "^0.8.0",
     "@fortawesome/fontawesome-free": "^5.15.1",
-    "angular-cli-ghpages": "^0.6.2",
     "bootstrap": "^4.5.3",
     "random-words": "^1.1.1",
     "rxjs": "~6.6.3",
