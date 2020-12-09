@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MorseCheckBannerComponent } from './morse-check-banner.component';
 
@@ -6,7 +6,7 @@ describe('MorseCheckBannerComponent', () => {
   let component: MorseCheckBannerComponent;
   let fixture: ComponentFixture<MorseCheckBannerComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MorseCheckBannerComponent ]
     })

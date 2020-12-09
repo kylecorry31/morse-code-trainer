@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MorseLearnComponent } from './morse-learn.component';
 
@@ -6,7 +6,7 @@ describe('MorseLearnComponent', () => {
   let component: MorseLearnComponent;
   let fixture: ComponentFixture<MorseLearnComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MorseLearnComponent ]
     })
