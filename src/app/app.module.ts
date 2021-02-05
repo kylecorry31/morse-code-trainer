@@ -10,6 +10,8 @@ import { MorseCheckBannerComponent } from "./morse-check-banner/morse-check-bann
 import { MorseTextEntryComponent } from "./morse-text-entry/morse-text-entry.component";
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { MorseLearnComponent } from './morse-learn/morse-learn.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import { MorseLearnComponent } from './morse-learn/morse-learn.component';
     MainMenuComponent,
     MorseLearnComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [],
   bootstrap: [AppComponent],
 })
