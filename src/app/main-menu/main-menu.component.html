@@ -1,9 +1,7 @@
 <div
   class="d-flex flex-column container p-3 align-items-center justify-content-center"
 >
-  <h1 class="center mb-2">
-    Morse Code Trainer
-  </h1>
+  <h1 class="center mb-2">Morse Code Trainer</h1>
   <h3 class="center mb-5">
     <span class="mr-5 d-inline-block"
       >--&nbsp;&nbsp;---&nbsp;&nbsp;.-.&nbsp;&nbsp;...&nbsp;&nbsp;.</span
@@ -15,14 +13,68 @@
       >-&nbsp;&nbsp;.-.&nbsp;&nbsp;.-&nbsp;&nbsp;..&nbsp;&nbsp;-.&nbsp;&nbsp;.&nbsp;&nbsp;.-.</span
     >
   </h3>
-  <a [routerLink]="['learn']" class="btn btn-primary col-md-6 mb-3">Learn</a>
-  <a [routerLink]="['practice', '1']" class="btn btn-light col-md-6 mb-3"
-    >Practice (easy)</a
+
+  <div
+    class="menu-buttons d-flex flex-row flex-wrap align-items-center justify-content-center"
   >
-  <a [routerLink]="['practice', '2']" class="btn btn-light col-md-6 mb-3"
-    >Practice (medium)</a
-  >
-  <a [routerLink]="['practice', '4']" class="btn btn-light col-md-6"
-    >Practice (hard)</a
-  >
+    <a [routerLink]="['learn']" class="no-decoration m-4">
+      <app-icon-button
+        [icon]="'school'"
+        [text]="'Learn'"
+        [foregroundColor]="'#FFFFFF'"
+        [backgroundColor]="'#FF6D00'"
+        [size]="'125px'"
+        [iconSize]="'32px'"
+      >
+      </app-icon-button>
+    </a>
+
+    <a [routerLink]="['sense']" class="no-decoration m-4">
+      <app-icon-button
+        [icon]="'hearing'"
+        [text]="'Sense'"
+        [foregroundColor]="'#FF6D00'"
+        [backgroundColor]="'#FFFFFF'"
+        [size]="'125px'"
+        [iconSize]="'32px'"
+      >
+      </app-icon-button>
+    </a>
+
+    <a [routerLink]="['practice', '1']" class="no-decoration m-4">
+      <app-icon-button
+        [icon]="'edit'"
+        [text]="'Easy'"
+        [foregroundColor]="'#FF6D00'"
+        [backgroundColor]="'#FFFFFF'"
+        [size]="'125px'"
+        [iconSize]="'32px'"
+      >
+      </app-icon-button>
+    </a>
+
+    <a [routerLink]="['practice', '2']" class="no-decoration m-4">
+      <app-icon-button
+        [icon]="'edit'"
+        [text]="'Medium'"
+        [foregroundColor]="'#FF6D00'"
+        [backgroundColor]="'#FFFFFF'"
+        [size]="'125px'"
+        [iconSize]="'32px'"
+      >
+      </app-icon-button>
+    </a>
+
+    <a [routerLink]="['practice', '3']" class="no-decoration m-4">
+      <app-icon-button
+        [icon]="'edit'"
+        [text]="'Hard'"
+        [foregroundColor]="'#FF6D00'"
+        [backgroundColor]="'#FFFFFF'"
+        [size]="'125px'"
+        [iconSize]="'32px'"
+      >
+      </app-icon-button>
+    </a>
+  </div>
 </div>

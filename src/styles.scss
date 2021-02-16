@@ -4,10 +4,10 @@ $color-primary: #ff564f;
 $color-primary-dark: #b32a25;
 $color-primary-light: #ff6e69;
 $color-secondary: white;
-$color-accent: #14b34b;
+$color-accent: #00b200;
 $color-accent-light: #4fff8c;
 
-$body-bg: $color-primary;
+$body-bg: #121212;
 $body-color: $color-secondary;
 
 $theme-colors: (
@@ -31,4 +31,21 @@ body {
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.no-decoration {
+  text-decoration: none !important;
 }

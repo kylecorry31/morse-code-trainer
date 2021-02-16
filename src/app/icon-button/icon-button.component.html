@@ -1,0 +1,10 @@
+<button
+  class="btn d-flex align-items-center justify-content-center"
+  [style.background]="backgroundColor"
+  [style.color]="foregroundColor"
+  [style.width]="size"
+  [style.height]="size"
+>
+  <i class="material-icons" [style.font-size]="iconSize">{{ icon }}</i>
+  <p class="m-0" *ngIf="text" [style.font-size]="fontSize">{{ text }}</p>
+</button>

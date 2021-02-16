@@ -1,11 +1,15 @@
-<button
-  type="button"
-  class="btn btn-primary btn-lg mr-3"
+<app-icon-button
+  [icon]="'volume_up'"
+  [foregroundColor]="'#FFFFFF'"
+  [backgroundColor]="'#FF6D00'"
+  [size]="'48px'"
+  [iconSize]="'24px'"
   (click)="playNormal()"
   [class.disabled]="disabled"
+  class="mr-3"
 >
-  <i class="fas fa-volume-up"></i>
-</button>
+</app-icon-button>
+
 <ng-container *ngIf="showHints">
   <div class="morse-word mr-3 d-inline" *ngFor="let word of symbols">
     <ng-container *ngFor="let symbol of word">

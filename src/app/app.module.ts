@@ -12,6 +12,8 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
 import { MorseLearnComponent } from './morse-learn/morse-learn.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { MorseSensoryTrainerComponent } from './morse-sensory-trainer/morse-sensory-trainer.component';
+import { IconButtonComponent } from './icon-button/icon-button.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { environment } from '../environments/environment';
     MorseTextEntryComponent,
     MainMenuComponent,
     MorseLearnComponent,
+    MorseSensoryTrainerComponent,
+    IconButtonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [],

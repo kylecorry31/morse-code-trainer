@@ -1,0 +1,44 @@
+<div id="player" class="container">
+  <app-morse-player
+    [text]="letter1 + ' ' + letter2"
+    class="float-left"
+    [showHints]="false"
+  ></app-morse-player>
+  <a [routerLink]="['']" class="btn float-right"
+    ><h3><i class="fas fa-times"></i></h3
+  ></a>
+</div>
+
+<div id="text-entry">
+  <app-icon-button
+    [icon]="'check'"
+    class="m-3"
+    text="Same"
+    [foregroundColor]="'#FFFFFF'"
+    [backgroundColor]="'#00b200'"
+    [size]="'128px'"
+    [iconSize]="'64px'"
+    (click)="isCorrect = same"
+  >
+  </app-icon-button>
+  <app-icon-button
+    [icon]="'clear'"
+    class="m-3"
+    text="Different"
+    [foregroundColor]="'#FFFFFF'"
+    [backgroundColor]="'#fc1808'"
+    [size]="'128px'"
+    [iconSize]="'64px'"
+    (click)="isCorrect = !same"
+  >
+  </app-icon-button>
+</div>
+
+<div id="footer">
+  <app-morse-check-banner
+    [isCorrect]="isCorrect"
+    [correctAnswer]="letter1 + ' ' + letter2"
+    (next)="selectNextLetters()"
+    *ngIf="isCorrect != null"
+  ></app-morse-check-banner>
+</div>
