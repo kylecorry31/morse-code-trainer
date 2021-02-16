@@ -1,8 +1,8 @@
 {
   "name": "morse-code",
   "short_name": "morse-code",
-  "theme_color": "#ff564f",
-  "background_color": "#ff564f",
+  "theme_color": "#FF6D00",
+  "background_color": "#FF6D00",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",

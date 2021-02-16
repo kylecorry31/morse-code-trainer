@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1612562726587,
+  "timestamp": 1613434934391,
   "index": "/morse-code-trainer/index.html",
   "assetGroups": [
     {
@@ -13,14 +13,14 @@
       "urls": [
         "/morse-code-trainer/favicon.ico",
         "/morse-code-trainer/index.html",
-        "/morse-code-trainer/main-es2019.84684d78b87f33bb7df4.js",
-        "/morse-code-trainer/main-es5.84684d78b87f33bb7df4.js",
+        "/morse-code-trainer/main-es2019.71ef31e570e26970d0f1.js",
+        "/morse-code-trainer/main-es5.71ef31e570e26970d0f1.js",
         "/morse-code-trainer/manifest.webmanifest",
         "/morse-code-trainer/polyfills-es2019.75c375c674ece37157aa.js",
         "/morse-code-trainer/polyfills-es5.c12f2235443bead31877.js",
         "/morse-code-trainer/runtime-es2019.a4dadbc03350107420a4.js",
         "/morse-code-trainer/runtime-es5.a4dadbc03350107420a4.js",
-        "/morse-code-trainer/styles.29c6d70658a95849230f.css"
+        "/morse-code-trainer/styles.6e7a2c0bb5e963082b81.css"
       ],
       "patterns": []
     },
@@ -73,15 +73,15 @@
     "/morse-code-trainer/fa-solid-900.915a0b79c22a1c1f64da.ttf": "54a19042f3232f6b58df80f01b4b018a11868096",
     "/morse-code-trainer/fa-solid-900.f4f93856730733912b1e.woff": "18d9a334e7184ae08e3a1c0468afb56a2a5b51cc",
     "/morse-code-trainer/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/morse-code-trainer/index.html": "f039e659ece8a59faecfdb09752d5539dac7c61e",
-    "/morse-code-trainer/main-es2019.84684d78b87f33bb7df4.js": "a53b9bbe10f1065b879a33e5033532a76698d8bd",
-    "/morse-code-trainer/main-es5.84684d78b87f33bb7df4.js": "4a32766ba2e9b51496912cfac5d4019cc9f068ed",
-    "/morse-code-trainer/manifest.webmanifest": "205c3aee518ad86272e025ae40139fa6b7ae312d",
+    "/morse-code-trainer/index.html": "648d7199c8131bdf9480911bd0f74a05b76d6262",
+    "/morse-code-trainer/main-es2019.71ef31e570e26970d0f1.js": "72f5830cc0d089db50de95ebaa3a67fa23032dc9",
+    "/morse-code-trainer/main-es5.71ef31e570e26970d0f1.js": "44a0414bb011adc9e3e72576e81acd534db622de",
+    "/morse-code-trainer/manifest.webmanifest": "e6c83e10fc201bd5340ee3db3ea1de140144be85",
     "/morse-code-trainer/polyfills-es2019.75c375c674ece37157aa.js": "65c537467564ee0ba776b629f71ed3413413a7cb",
     "/morse-code-trainer/polyfills-es5.c12f2235443bead31877.js": "312d6393097c71ae6ff0a134e6d5efce85c84fa9",
     "/morse-code-trainer/runtime-es2019.a4dadbc03350107420a4.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/morse-code-trainer/runtime-es5.a4dadbc03350107420a4.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/morse-code-trainer/styles.29c6d70658a95849230f.css": "b3b69b624361c6f3e79b38e690bf27094367926f"
+    "/morse-code-trainer/styles.6e7a2c0bb5e963082b81.css": "8f19ed9e1e6a9cb399fd722646e4cbd7cb871b75"
   },
   "navigationUrls": [
     {
